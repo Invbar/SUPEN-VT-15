@@ -13,5 +13,10 @@ namespace Supen.Controllers
         {
             return View();
         }
+
+        public ActionResult NotIndex()
+        {
+            return View();
+        }
     }
 }

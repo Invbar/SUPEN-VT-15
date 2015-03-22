@@ -1,6 +1,5 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -16,3 +15,106 @@ textarea {
     max-width: 280px;
 }
 
+left-sidebar {
+    position: absolute;
+    margin-top: 100px;
+    }
+/*--------------HEADER---------------*/
+
+#header {
+    height: 45px;
+    width: 100%;
+    background-color: #555555;
+    padding: 8px;
+    
+}
+#header i {
+    display: none;
+}
+
+#header a {
+    color: darkgrey;
+    text-decoration: none;
+    float: left;
+}
+/*---------------MENU----------------*/
+
+#left-menu {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+ul.main-menu {
+    padding-left: 0;
+    padding-bottom: 0px;
+    list-style-type: none;
+}
+ul.main-menu>li a {
+    display: block;
+    position: relative;
+    padding: 10px 0 10px 15px;
+    color: #555;
+    background-color: #ececec;
+    border-top: 1px solid #dfdfdf;
+    text-decoration: none;
+}
+ul.main-menu>li a:hover {
+    text-decoration: none;
+    background-color: #f1f1f1;
+}
+ul.main-menu>li.active>a {
+    font-weight: 700;
+    background-color: #dfdfdf;
+}
+ul.main-menu>li:first-child>a {
+    border-top: none;
+}
+ul.main-menu>li .fa {
+    width: 14px;
+    text-align: center;
+}
+ul.main-menu>li .text {
+    padding-left: 8px;
+    font-size: 0.9em;
+}
+ul.main-menu>li .toggle-icon {
+    font-size: 14px;
+    width: 10px;
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    text-shadow: none;
+}
+ul.main-menu .sub-menu {
+    position: relative;
+    display: none;
+    padding-left: 0;
+    list-style-type: none;
+}
+ul.main-menu .sub-menu li a {
+    padding-left: 33px;
+}
+ul.main-menu .sub-menu li.active a {
+    font-weight: 700;
+}
+ul.main-menu .sub-menu.open {
+    overflow: hidden;
+    display: block;
+}
+@media(max-width: 993px) {
+    .main-menu {
+        display: none;
+    }
+    #header i {
+        display: block;
+        width: 50px;
+    }
+
+}
+
+/*--------Main--------*/
+#main {
+    background-color: #f1f1f1;
+    min-height: 500px;
+    margin-top: 0px;
+}
