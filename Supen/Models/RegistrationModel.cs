@@ -30,13 +30,15 @@ namespace Supen.Models
         [EmailAddress(ErrorMessage = "Invalid email adress")]
         public string Email { get; set; }
 
-        public Users CreateNewUser(){
+        public Users CreateNewUser(string salt){
             var newUser = new Users();
             newUser.Username = newUser.Firstname.Substring(0, 3) + newUser.Surname.Substring(0, 3);
             newUser.uPassword = Password;
             newUser.email = Email;
             newUser.Firstname = Firstname;
             newUser.Surname = Surename;
+            newUser.Salt = salt;
+            return newUser;
         }
     
     }

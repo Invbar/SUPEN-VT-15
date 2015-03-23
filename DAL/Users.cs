@@ -20,5 +20,6 @@ namespace DAL
         public string Firstname { get; set; }
         public string Surname { get; set; }
         public string uPassword { get; set; }
+        public string Salt { get; set; }
     }
 }
