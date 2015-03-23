@@ -11,7 +11,7 @@
           </Key>
           <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Username" Type="nvarchar" MaxLength="255" Nullable="false" />
-          <Property Name="uPassword" Type="binary" MaxLength="60" Nullable="false" />
+          <Property Name="uPassword" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="email" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="Firstname" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="Surname" Type="nvarchar" MaxLength="255" Nullable="false" />
@@ -29,10 +29,10 @@
           </Key>
           <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Username" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="uPassword" Type="Binary" MaxLength="60" FixedLength="true" Nullable="false" />
           <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Firstname" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Surname" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="uPassword" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="SUPENEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="Self.Users" />
@@ -46,11 +46,11 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="SUPENModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="uPassword" ColumnName="uPassword" />
                 <ScalarProperty Name="Surname" ColumnName="Surname" />
                 <ScalarProperty Name="Firstname" ColumnName="Firstname" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="uPassword" ColumnName="uPassword" />
                 <ScalarProperty Name="email" ColumnName="email" />
               </MappingFragment>
             </EntityTypeMapping>

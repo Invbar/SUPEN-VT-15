@@ -5,6 +5,8 @@ namespace DAL.Repositorys
 {
     public class UserReopsitory
     {
+
+
         public static void Register(Users user){
             try{
                 using (var context = new SUPENEntities() ){
@@ -17,18 +19,6 @@ namespace DAL.Repositorys
                 
             }
         }
-
-
-        public static bool ValidateUser(string user){
-            using (var context = new SUPENEntities()){
-                var result = context.Users.FirstOrDefault(e => e.Username == user);
-                if (result != null){
-                    return false;
-                }
-                return true;
-            }
-        }
-
 
     }
 }
