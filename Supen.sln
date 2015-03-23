@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supen", "Supen\Supen.csproj", "{F500C1AF-4CF5-4E74-9DC8-043AB9750015}"
+	ProjectSection(ProjectDependencies) = postProject
+		{55D3EB6B-DD79-4CEE-A9ED-C0215D6FA0C6} = {55D3EB6B-DD79-4CEE-A9ED-C0215D6FA0C6}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{55D3EB6B-DD79-4CEE-A9ED-C0215D6FA0C6}"
 EndProject
