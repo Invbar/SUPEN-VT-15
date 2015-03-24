@@ -11,13 +11,13 @@ function logIn() {
                 data: $(this).serialize(),
                 success: function(result) {
                     if (result == true) {
-                        window.location = "//";
-                    } else {//om inloggning misslyckas
+                        window.location = "/Portal/";
+                    } else {
                         
                     }
                 }
             });
-        } else {//om validering av fält misslyckas
+        } else {
 
         }
         return false;
@@ -36,7 +36,7 @@ function Register() {
                 data: $(this).serialize(),
                 success: function(result) {
                     if (result == true) {
-                        window.location = "";
+                        window.location = "/Portal/";
                     }
                     else {
                         
