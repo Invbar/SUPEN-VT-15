@@ -24,7 +24,7 @@ namespace Supen.Models
         public string Firstname { get; set; }
 
         [Required(ErrorMessage = "State your surename")]
-        public string Surename { get; set; }
+        public string Surname { get; set; }
 
         [Required(ErrorMessage = "State your email")]
         [EmailAddress(ErrorMessage = "Invalid email adress")]
@@ -36,7 +36,7 @@ namespace Supen.Models
             newUser.uPassword = Password;
             newUser.email = Email;
             newUser.Firstname = Firstname;
-            newUser.Surname = Surename;
+            newUser.Surname = Surname;
             newUser.Salt = salt;
             return newUser;
         }

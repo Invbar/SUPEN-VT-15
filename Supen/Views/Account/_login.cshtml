@@ -1,2 +1,14 @@
 ﻿@using System.Web.Mvc.Html;
 @model Supen.Models.LoginModel
+
+
+<script src="~/Scripts/Json.js"></script>
+
+@using (Ajax.BeginForm(null, null, null, new { id = "LoginForm" }))
+{
+    <p class="logintext">
+        @Html.TextBoxFor(u => u.Username, new { @class = "" })&nbsp;
+        @Html.PasswordFor(u => u.Password, new { @class = "" })&nbsp;
+        <input type="submit" value="LogIn" />
+    </p>
+    <div id="errormessage-box"></div>

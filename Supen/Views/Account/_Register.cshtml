@@ -1,2 +1,22 @@
 ﻿@using System.Web.Mvc.Html;
 @model Supen.Models.RegistrationModel
+<script src="~/Scripts/Json.js"></script>
+
+<div id="Registration-Container">
+    @using (Ajax.BeginForm(null, null, null, new { id = "RegistrationForm", @class = "box-style" }))
+    {
+        <div id="RegistrationForm-Form">
+            <p>Lösenord:@Html.PasswordFor(x => x.Password, new { @class = "form-control" })</p>
+            <p>Upprepa lösenord:@Html.PasswordFor(x => x.PasswordMatch, new { @class = "form-control" })</p>
+           
+            
+            <p><input type="submit" value="Fortsätt" class="btn-style" /></p>
+        </div>
+        <div id="RegistrationForm-ErrorMessage">
+            <p class="text-error">@Html.ValidationMessageFor(u => u.Password)&nbsp;</p>
+            <p class="text-error">@Html.ValidationMessageFor(x => x.PasswordMatch) &nbsp;</p>
+            <p class="text-error">@Html.ValidationMessageFor(u => u.Firstname)&nbsp;</p>
+            <p class="text-error">@Html.ValidationMessageFor(u => u.Surname)&nbsp;</p>
+        </div>
+    }
+</div>
